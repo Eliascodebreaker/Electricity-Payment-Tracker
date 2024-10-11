@@ -5,69 +5,94 @@
     box-sizing: border-box;
 }
 
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background: #1c1c1e url('images/galaxy-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.nav {
+    list-style: none;
 }
 
-nav ul li {
+.nav li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
-nav ul li a {
+.nav a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #f39c12;
+.nav a:hover {
+    color: #01fefe;
+    text-shadow: 0 0 10px #01fefe;
 }
 
 main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+    padding: 30px;
 }
 
-footer {
-    background-color: #333;
+.tenant-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.tenant-list li {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #f39c12;
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    nav ul {
+button:hover {
+    background-color: #e67e22;
+}
+
+#latest-payments, #previous-payments {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#latest-history, #previous-history {
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .nav li {
         display: block;
-        text-align: center;
+        margin: 10px 0;
     }
 
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    table {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .intro h2 {
-        font-size: 24px;
+    .tenant-list li {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
