@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Dark mode as requested */
+    color: white; /* Text color contrast */
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #f0a500; /* Make headings stand out */
+}
+
+.checkbox-label {
+    display: block;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #f0a500;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d08c00;
+}
+
+.tenant-box {
+    margin: 20px 0;
+}
+
+#payment-info-box {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #333;
+}
