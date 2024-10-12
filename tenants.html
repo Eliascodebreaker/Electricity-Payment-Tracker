@@ -3,40 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Tenants</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Our Tenants</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tenants.html">Tenants</a></li>
-                <li><a href="payment-history.html">Payment History</a></li>
-                <li><a href="house-rules.html">House Rules</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="history.html">Payment History</a>
+        <a href="rules.html">House Rules</a>
+    </nav>
 
-    <main>
-        <section>
-            <h2>List of Tenants</h2>
-            <ul>
-                <li>Elias</li>
-                <li>Mojalefa</li>
-                <li>Tebza</li>
-                <li>Beauty</li>
-                <li>Bontle</li>
-                <li>Girly</li>
-                <li>Lesego</li>
-                <li>Rachel</li>
-            </ul>
-        </section>
-    </main>
+    <div class="container">
+        <h1>Tenants and Payment Status</h1>
 
-    <footer>
-        <p>&copy; 2024 Electricity Payment Tracker</p>
-    </footer>
+        <!-- Elias -->
+        <div class="tenant-box">
+            <h2>Elias</h2>
+            <label class="checkbox-label"><input type="checkbox" id="elias-jan"> January</label>
+            <label class="checkbox-label"><input type="checkbox" id="elias-feb"> February</label>
+            <!-- Repeat for all months -->
+        </div>
+
+        <!-- Mojalefa -->
+        <div class="tenant-box">
+            <h2>Mojalefa</h2>
+            <label class="checkbox-label"><input type="checkbox" id="mojalefa-jan"> January</label>
+            <label class="checkbox-label"><input type="checkbox" id="mojalefa-feb"> February</label>
+            <!-- Repeat for all months -->
+        </div>
+
+        <!-- Other tenants... -->
+
+        <div id="payment-info-box">
+            <p>Past Payments and Current Status will be displayed here...</p>
+        </div>
+
+        <button onclick="showPastPayments()">Show Past Payments</button>
+    </div>
+
+    <script>
+        // Function to store payment status in local storage
+        function savePayments() {
+            let eliasJan = document.getElementById('elias-jan').checked;
+            let eliasFeb = document.getElementById('elias-feb').checked;
+            let mojalefaJan = document.getElementById('mojalefa-jan').checked;
+            let mojalefaFeb = document.getElementById('mojalefa-feb').checked;
+
+            // Save payment status in local storage
+            localStorage.setItem('elias-jan', eliasJan);
+            localStorage.setItem('elias-feb', eliasFeb);
+            localStorage.setItem('mojalefa-jan', mojalefaJan);
+            localStorage.setItem('mojalefa-feb', mojalefaFeb);
+        }
+
+        // Function to load payment status when the page is loaded
+        function loadPayments() {
+            document.getElementById('elias-jan').checked = JSON.parse(localStorage.getItem('elias-jan'));
+            document.getElementById('elias-feb').checked = JSON.parse(localStorage.getItem('elias-feb'));
+            document.getElementById('mojalefa-jan').checked = JSON.parse(localStorage.getItem('mojalefa-jan'));
+            document.getElementById('mojalefa-feb').checked = JSON.parse(localStorage.getItem('mojalefa-feb'));
+        }
+
+        // Function to show past payments (for now, just a placeholder)
+        function showPastPayments() {
+            const infoBox = document.getElementById('payment-info-box');
+            infoBox.innerHTML = '<p>elias paid</p>';
+        }
+
+        // Call loadPayments when the page loads
+        window.onload = loadPayments;
+
+        // Add event listeners to save payments on checkbox changes
+        document.getElementById('elias-jan').addEventListener('change', savePayments);
+        document.getElementById('elias-feb').addEventListener('change', savePayments);
+        document.getElementById('mojalefa-jan').addEventListener('change', savePayments);
+        document.getElementById('mojalefa-feb').addEventListener('change', savePayments);
+    </script>
 </body>
 </html>
