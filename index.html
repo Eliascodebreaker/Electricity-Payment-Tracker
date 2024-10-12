@@ -3,72 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Electricity Payment Tracker</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Electricity Payment Tracker</h1>
-        <nav>
-            <ul class="nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#tenants">Tenants</a></li>
-                <li><a href="#payment-history">Payment History</a></li>
-                <li><a href="#house-rules">House Rules</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <a href="tenants.html">Tenants</a>
+        <a href="history.html">Payment History</a>
+        <a href="rules.html">House Rules</a>
+    </nav>
 
-    <main id="home">
-        <h2>Welcome</h2>
-        <p>This website helps track electricity payments among housemates. It ensures everyone contributes to the monthly electricity bill.</p>
-    </main>
+    <div class="container">
+        <h1>Welcome to the Electricity Payment Tracker</h1>
+        <p>This website helps track electricity payments in the house. Some tenants do not contribute regularly, and this system helps us monitor who has paid and who hasn't each month.</p>
 
-    <section id="tenants">
-        <h2>Tenants</h2>
-        <ul class="tenant-list">
-            <li>Elias <input type="checkbox" id="elias"></li>
-            <li>Mojalefa <input type="checkbox" id="mojalefa"></li>
-            <li>Tebza <input type="checkbox" id="tebza"></li>
-            <li>Beauty <input type="checkbox" id="beauty"></li>
-            <li>Bontle <input type="checkbox" id="bontle"></li>
-            <li>Girly <input type="checkbox" id="girly"></li>
-            <li>Lesego <input type="checkbox" id="lesego"></li>
-            <li>Rachel <input type="checkbox" id="rachel"></li>
-        </ul>
-        <button onclick="submitPayments()">Submit Payments</button>
-    </section>
-
-    <section id="payment-history">
-        <h2>Payment History</h2>
-        <div id="latest-payments">
-            <h3>Latest Payments</h3>
-            <div id="latest-history">
-                <!-- Latest payments will be displayed here -->
-            </div>
+        <!-- Calendar for next payment -->
+        <div id="calendar">
+            <p>Next payment due: November 1, 2024</p>
         </div>
-        <div id="previous-payments">
-            <h3>Previous Payments</h3>
-            <div id="previous-history">
-                <!-- Previous payments will be displayed here -->
-            </div>
-        </div>
-    </section>
-
-    <section id="house-rules">
-        <h2>House Rules</h2>
-        <ul>
-            <li>Keep the kitchen clean.</li>
-            <li>No loud music at night.</li>
-            <li>If someone is hungry, offer them food.</li>
-            <li>Take out the bin on the due date.</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>© 2024 Electricity Payment Tracker</p>
-    </footer>
-
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
