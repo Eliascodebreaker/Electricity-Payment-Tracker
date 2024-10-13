@@ -19,20 +19,51 @@
         <!-- Elias -->
         <div class="tenant-box">
             <h2>Elias</h2>
-            <label class="checkbox-label"><input type="checkbox" id="elias-jan"> January</label>
-            <label class="checkbox-label"><input type="checkbox" id="elias-feb"> February</label>
-            <!-- Repeat for all months -->
+            <label class="checkbox-label"><input type="checkbox" id="elias-sep" checked> September</label>
+            <label class="checkbox-label"><input type="checkbox" id="elias-oct"> October</label>
         </div>
 
         <!-- Mojalefa -->
         <div class="tenant-box">
             <h2>Mojalefa</h2>
-            <label class="checkbox-label"><input type="checkbox" id="mojalefa-jan"> January</label>
-            <label class="checkbox-label"><input type="checkbox" id="mojalefa-feb"> February</label>
-            <!-- Repeat for all months -->
+            <label class="checkbox-label"><input type="checkbox" id="mojalefa-sep" checked> September</label>
+            <label class="checkbox-label"><input type="checkbox" id="mojalefa-oct"> October</label>
         </div>
 
-        <!-- Other tenants... -->
+        <!-- Lesego -->
+        <div class="tenant-box">
+            <h2>Lesego</h2>
+            <label class="checkbox-label"><input type="checkbox" id="lesego-sep" checked> September</label>
+            <label class="checkbox-label"><input type="checkbox" id="lesego-oct" checked> October</label>
+        </div>
+
+        <!-- Rechel -->
+        <div class="tenant-box">
+            <h2>Rechel</h2>
+            <label class="checkbox-label"><input type="checkbox" id="rechel-sep" checked> September</label>
+            <label class="checkbox-label"><input type="checkbox" id="rechel-oct" checked> October</label>
+        </div>
+
+        <!-- Beaty -->
+        <div class="tenant-box">
+            <h2>Beaty</h2>
+            <label class="checkbox-label"><input type="checkbox" id="beaty-sep" checked> September</label>
+            <label class="checkbox-label"><input type="checkbox" id="beaty-oct"> October</label>
+        </div>
+
+        <!-- Bontle -->
+        <div class="tenant-box">
+            <h2>Bontle</h2>
+            <label class="checkbox-label"><input type="checkbox" id="bontle-sep" checked> September</label>
+            <label class="checkbox-label"><input type="checkbox" id="bontle-oct"> October</label>
+        </div>
+
+        <!-- Girly -->
+        <div class="tenant-box">
+            <h2>Girly</h2>
+            <label class="checkbox-label"><input type="checkbox" id="girly-sep"> September</label>
+            <label class="checkbox-label"><input type="checkbox" id="girly-oct"> October</label>
+        </div>
 
         <div id="payment-info-box">
             <p>Past Payments and Current Status will be displayed here...</p>
@@ -44,40 +75,81 @@
     <script>
         // Function to store payment status in local storage
         function savePayments() {
-            let eliasJan = document.getElementById('elias-jan').checked;
-            let eliasFeb = document.getElementById('elias-feb').checked;
-            let mojalefaJan = document.getElementById('mojalefa-jan').checked;
-            let mojalefaFeb = document.getElementById('mojalefa-feb').checked;
+            // Elias
+            let eliasSep = document.getElementById('elias-sep').checked;
+            let eliasOct = document.getElementById('elias-oct').checked;
+            
+            // Mojalefa
+            let mojalefaSep = document.getElementById('mojalefa-sep').checked;
+            let mojalefaOct = document.getElementById('mojalefa-oct').checked;
+            
+            // Lesego
+            let lesegoSep = document.getElementById('lesego-sep').checked;
+            let lesegoOct = document.getElementById('lesego-oct').checked;
+            
+            // Rechel
+            let rechelSep = document.getElementById('rechel-sep').checked;
+            let rechelOct = document.getElementById('rechel-oct').checked;
+            
+            // Beaty
+            let beatySep = document.getElementById('beaty-sep').checked;
+            let beatyOct = document.getElementById('beaty-oct').checked;
+            
+            // Bontle
+            let bontleSep = document.getElementById('bontle-sep').checked;
+            let bontleOct = document.getElementById('bontle-oct').checked;
+            
+            // Girly
+            let girlySep = document.getElementById('girly-sep').checked;
+            let girlyOct = document.getElementById('girly-oct').checked;
 
             // Save payment status in local storage
-            localStorage.setItem('elias-jan', eliasJan);
-            localStorage.setItem('elias-feb', eliasFeb);
-            localStorage.setItem('mojalefa-jan', mojalefaJan);
-            localStorage.setItem('mojalefa-feb', mojalefaFeb);
+            localStorage.setItem('elias-sep', eliasSep);
+            localStorage.setItem('elias-oct', eliasOct);
+            localStorage.setItem('mojalefa-sep', mojalefaSep);
+            localStorage.setItem('mojalefa-oct', mojalefaOct);
+            localStorage.setItem('lesego-sep', lesegoSep);
+            localStorage.setItem('lesego-oct', lesegoOct);
+            localStorage.setItem('rechel-sep', rechelSep);
+            localStorage.setItem('rechel-oct', rechelOct);
+            localStorage.setItem('beaty-sep', beatySep);
+            localStorage.setItem('beaty-oct', beatyOct);
+            localStorage.setItem('bontle-sep', bontleSep);
+            localStorage.setItem('bontle-oct', bontleOct);
+            localStorage.setItem('girly-sep', girlySep);
+            localStorage.setItem('girly-oct', girlyOct);
         }
 
         // Function to load payment status when the page is loaded
         function loadPayments() {
-            document.getElementById('elias-jan').checked = JSON.parse(localStorage.getItem('elias-jan'));
-            document.getElementById('elias-feb').checked = JSON.parse(localStorage.getItem('elias-feb'));
-            document.getElementById('mojalefa-jan').checked = JSON.parse(localStorage.getItem('mojalefa-jan'));
-            document.getElementById('mojalefa-feb').checked = JSON.parse(localStorage.getItem('mojalefa-feb'));
+            document.getElementById('elias-sep').checked = JSON.parse(localStorage.getItem('elias-sep'));
+            document.getElementById('elias-oct').checked = JSON.parse(localStorage.getItem('elias-oct'));
+            document.getElementById('mojalefa-sep').checked = JSON.parse(localStorage.getItem('mojalefa-sep'));
+            document.getElementById('mojalefa-oct').checked = JSON.parse(localStorage.getItem('mojalefa-oct'));
+            document.getElementById('lesego-sep').checked = JSON.parse(localStorage.getItem('lesego-sep'));
+            document.getElementById('lesego-oct').checked = JSON.parse(localStorage.getItem('lesego-oct'));
+            document.getElementById('rechel-sep').checked = JSON.parse(localStorage.getItem('rechel-sep'));
+            document.getElementById('rechel-oct').checked = JSON.parse(localStorage.getItem('rechel-oct'));
+            document.getElementById('beaty-sep').checked = JSON.parse(localStorage.getItem('beaty-sep'));
+            document.getElementById('beaty-oct').checked = JSON.parse(localStorage.getItem('beaty-oct'));
+            document.getElementById('bontle-sep').checked = JSON.parse(localStorage.getItem('bontle-sep'));
+            document.getElementById('bontle-oct').checked = JSON.parse(localStorage.getItem('bontle-oct'));
+            document.getElementById('girly-sep').checked = JSON.parse(localStorage.getItem('girly-sep'));
+            document.getElementById('girly-oct').checked = JSON.parse(localStorage.getItem('girly-oct'));
         }
 
-        // Function to show past payments (for now, just a placeholder)
+        // Function to show past payments
         function showPastPayments() {
             const infoBox = document.getElementById('payment-info-box');
-            infoBox.innerHTML = '<p>elias paid</p>';
+            infoBox.innerHTML = '<p>Elias, Lesego, Mojalefa, Rechel, Beaty, and Bontle paid in September. Girly pending.</p>';
         }
 
         // Call loadPayments when the page loads
         window.onload = loadPayments;
 
         // Add event listeners to save payments on checkbox changes
-        document.getElementById('elias-jan').addEventListener('change', savePayments);
-        document.getElementById('elias-feb').addEventListener('change', savePayments);
-        document.getElementById('mojalefa-jan').addEventListener('change', savePayments);
-        document.getElementById('mojalefa-feb').addEventListener('change', savePayments);
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => checkbox.addEventListener('change', savePayments));
     </script>
 </body>
 </html>
