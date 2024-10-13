@@ -5,76 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Electricity Payment Tracker</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1e1e1e;
-            color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            background-color: #333;
-            padding: 10px 20px;
-            text-align: center;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: #f0f0f0;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav a:hover {
-            color: #00d1b2;
-        }
-
-        .container {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        #calendar {
-            background-color: #444;
-            padding: 20px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 30px;
-        }
-
-        #calendar p {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        #calendar .highlight {
-            color: #00d1b2;
-        }
-
-        /* Footer styling */
-        footer {
-            background-color: #333;
-            padding: 10px 0;
-            text-align: center;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            color: #f0f0f0;
-            font-size: 14px;
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -84,29 +14,17 @@
     </nav>
 
     <div class="container">
-        <h1>Welcome to the Electricity Payment Tracker!</h1>
-        <p>This system helps monitor electricity payments and ensures everyone contributes. Keep track of payments here and stay updated with the house rules.</p>
+        <h1>Welcome to the Electricity Payment Tracker</h1>
+        <p>This website helps track electricity payments in the house. Some tenants do not contribute regularly, and this system helps us monitor who has paid and who hasn't each month.</p>
 
-        <!-- Calendar with next payment -->
+        <!-- Calendar for next payment -->
         <div id="calendar">
-            <p>Next payment due: <span class="highlight">November 1, 2024</span></p>
+            <p>Next payment due: November 1, 2024</p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Electricity Payment Tracker | Managed by Elias</p>
+        <p>Electricity Tracker | Managed by Elias</p>
     </footer>
-
-    <script>
-        // Example JavaScript to dynamically display today's date and next payment date
-        const today = new Date();
-        const nextPaymentDate = new Date('2024-11-01');
-        
-        // Check if today is the due date and highlight it
-        const calendar = document.getElementById('calendar');
-        if (today.toDateString() === nextPaymentDate.toDateString()) {
-            calendar.innerHTML = "<p><span class='highlight'>Today is the payment due date: " + today.toDateString() + "</span></p>";
-        }
-    </script>
 </body>
 </html>
