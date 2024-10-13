@@ -1,58 +1,101 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: black; /* Dark mode as requested */
-    color: white; /* Text color contrast */
+    background: #0e0e0e;
+    color: #fff;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Navbar Styles */
 nav {
-    background-color: #444;
-    padding: 10px;
-    text-align: center;
+    background-color: #333;
+    padding: 10px 0;
 }
 
 nav a {
-    color: white;
-    margin: 0 15px;
+    color: #fff;
     text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #444;
+    color: #01fefe;
+    text-shadow: 0 0 10px #01fefe;
+}
+
+nav a.active {
+    background-color: #01fefe;
+    color: #000;
 }
 
 .container {
     padding: 20px;
 }
 
-h1, h2 {
-    color: #f0a500; /* Make headings stand out */
+#calendar {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
-.checkbox-label {
-    display: block;
-    margin: 5px 0;
+#calendar p {
+    font-size: 1.2rem;
 }
 
-button {
-    background-color: #f0a500;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #d08c00;
-}
-
-.tenant-box {
-    margin: 20px 0;
-}
-
-#payment-info-box {
-    margin: 20px 0;
-    padding: 10px;
+/* Footer */
+footer {
     background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+    nav a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    #calendar p {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
 }
