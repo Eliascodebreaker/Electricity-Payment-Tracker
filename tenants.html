@@ -65,6 +65,13 @@
             <label class="checkbox-label"><input type="checkbox" id="girly-oct"> October</label>
         </div>
 
+        <!-- Tebogo -->
+        <div class="tenant-box">
+            <h2>Tebogo</h2>
+            <label class="checkbox-label"><input type="checkbox" id="tebogo-sep" checked> September</label>
+            <label class="checkbox-label"><input type="checkbox" id="tebogo-oct" checked> October</label>
+        </div>
+
         <div id="payment-info-box">
             <p>Past Payments and Current Status will be displayed here...</p>
         </div>
@@ -103,6 +110,10 @@
             let girlySep = document.getElementById('girly-sep').checked;
             let girlyOct = document.getElementById('girly-oct').checked;
 
+            // Tebogo
+            let tebogoSep = document.getElementById('tebogo-sep').checked;
+            let tebogoOct = document.getElementById('tebogo-oct').checked;
+
             // Save payment status in local storage
             localStorage.setItem('elias-sep', eliasSep);
             localStorage.setItem('elias-oct', eliasOct);
@@ -118,6 +129,8 @@
             localStorage.setItem('bontle-oct', bontleOct);
             localStorage.setItem('girly-sep', girlySep);
             localStorage.setItem('girly-oct', girlyOct);
+            localStorage.setItem('tebogo-sep', tebogoSep);
+            localStorage.setItem('tebogo-oct', tebogoOct);
         }
 
         // Function to load payment status when the page is loaded
@@ -136,12 +149,14 @@
             document.getElementById('bontle-oct').checked = JSON.parse(localStorage.getItem('bontle-oct'));
             document.getElementById('girly-sep').checked = JSON.parse(localStorage.getItem('girly-sep'));
             document.getElementById('girly-oct').checked = JSON.parse(localStorage.getItem('girly-oct'));
+            document.getElementById('tebogo-sep').checked = JSON.parse(localStorage.getItem('tebogo-sep'));
+            document.getElementById('tebogo-oct').checked = JSON.parse(localStorage.getItem('tebogo-oct'));
         }
 
         // Function to show past payments
         function showPastPayments() {
             const infoBox = document.getElementById('payment-info-box');
-            infoBox.innerHTML = '<p>Elias, Lesego, Mojalefa, Rechel, Beaty, and Bontle paid in September. Girly pending.</p>';
+            infoBox.innerHTML = '<p>Elias, Lesego, Mojalefa, Rechel, Beaty, Bontle, and Tebogo paid in September. Girly pending.</p>';
         }
 
         // Call loadPayments when the page loads
